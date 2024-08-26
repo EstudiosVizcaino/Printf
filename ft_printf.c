@@ -6,7 +6,7 @@
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 09:04:18 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/08/25 21:07:09 by cvizcain         ###   ########.fr       */
+/*   Updated: 2024/08/26 21:23:39 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,38 +14,37 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-int	ft_argcount(const char* s)
+int	ft_printf(const char *s, ...)
 {
-	int argcount;
+	va_list	lista;
+	char	*c;
 
-	argcount = 0;
+	va_start(lista, s);
+	c = " ";
 	while (*s)
 	{
 		if (*s == '%')
-			++argcount;
-		++s;
+		{
+			s++;
+			if (*s == 's')
+			{
+				c = va_arg(lista, char *);
+				write (1, c, sizeof(c));
+			}
+		}
+		else
+		{
+			write (1, s, 1);
+		}
+		s++;
 	}
-	printf("Arguments count: %i", argcount);
-
-	return argcount;
-}
-
-int	ft_printf(const char* s, ...)
-{
-	int args;
-	va_list lista;
-	
-	args = 0;
-	args = ft_argcount(s);
-	while (s++)
-	va_start(lista, s);
-	
 	write(1, s, sizeof(s) + 2);
 	return (1);
 }
 
 int	main(void)
 {
-	ft_argcount("%Ho%la mu%ndo");
+	char	*s = "Caracola";
+	ft_printf("Hola: %s como mola", s);
 	return (0);
 }
