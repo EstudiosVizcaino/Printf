@@ -2,10 +2,12 @@
 
 # Compiler and flags
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 # Source files and object files
-SRCS = ft_printf.c # Add other source files here
+SRCS = ft_printf.c\
+		ft_putstr.c # Add other source files here
+
 OBJS = $(SRCS:.c=.o)
 
 # Library name

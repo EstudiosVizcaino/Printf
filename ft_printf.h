@@ -1,44 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/03 09:04:18 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/08/27 16:59:08 by cvizcain         ###   ########.fr       */
+/*   Created: 2024/08/27 16:38:48 by cvizcain          #+#    #+#             */
+/*   Updated: 2024/08/27 16:59:01 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_printf.h"
+#include <unistd.h>
+#include <stdarg.h>
 
-int	ft_printf(const char *s, ...)
-{
-	va_list	lista;
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-	va_start(lista, s);
-	while (*s)
-	{
-		if (*s == '%')
-		{
-			s++;
-			if (*s == 's')
-				ft_putstr(va_arg(lista, char *));
-		}
-		else
-		{
-			write (1, s, 1);
-		}
-		s++;
-	}
-	write(1, s, sizeof(s) + 2);
-	return (1);
-}
+void	ft_putstr(char *s);
 
-int	main(void)
-{
-	char	*s = "Caracola";
-	ft_printf("Hola: %s como mola", s);
-	return (0);
-}
+
+
+
+#endif
