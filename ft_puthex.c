@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 16:48:45 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/08/27 19:42:49 by cvizcain         ###   ########.fr       */
+/*   Created: 2024/08/27 17:24:52 by cvizcain          #+#    #+#             */
+/*   Updated: 2024/08/27 20:24:46 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <string.h>
 
-void	ft_putstr(char *s, int *charcount)
+static void	ft_write(char c, int *charcount)
 {
-	*charcount += write (1, s, ft_strlen(s));
+	*charcount += write (1, &c, 1);
+}
+
+void	ft_getnbr(int nb, int *charcount, char *base)
+{
+	if (nb > 9)
+		ft_getnbr(nb / 16, charcount, base);
+	ft_write((base[(nb % 16)]), charcount);
+}
+
+void	ft_puthex(size_t nb, int *charcount)
+{
+		//Y = x % 15 -> 0 <= Y >= 15: Y ES EL INDEX DE BASE
+	ft_getnbr(nb, charcount, "0123456789abcdef");
 }

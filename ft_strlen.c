@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 16:48:45 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/08/27 19:42:49 by cvizcain         ###   ########.fr       */
+/*   Created: 2024/08/27 18:19:58 by cvizcain          #+#    #+#             */
+/*   Updated: 2024/08/27 19:26:43 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <string.h>
 
-void	ft_putstr(char *s, int *charcount)
+int	ft_strlen(char *s)
 {
-	*charcount += write (1, s, ft_strlen(s));
+	int	len;
+
+	len = 0;
+	while (*s)
+	{
+		++len;
+		++s;
+	}
+	return (len);
 }
