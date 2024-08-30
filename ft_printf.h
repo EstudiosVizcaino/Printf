@@ -6,10 +6,9 @@
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 16:38:48 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/08/30 21:50:17 by cvizcain         ###   ########.fr       */
+/*   Updated: 2024/08/30 22:00:51 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
