@@ -6,7 +6,7 @@
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 09:04:18 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/08/30 23:57:34 by cvizcain         ###   ########.fr       */
+/*   Updated: 2024/08/31 00:01:02 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ int	ft_printf(const char *s, ...)
 	}
 	return (charcount);
 }
-int	main(void)
-{
-	char	*s = ":)";
-	printf("\ncharcount: %i\n", ft_printf("Hola %s %c%c %i %x | %X Pointer: %p", s, 'x', 'D', 42, -69, 69, NULL));
-	printf("\ncharcount: %i\n", printf("Hola %s %c%c %i %x | %X Pointer: %p", s, 'x', 'D', 42, -69, 69, NULL));
-	return (0);
-}
+// int	main(void)
+// {
+// 	char	*s = ":)";
+// 	printf("\ncharcount: %i\n", ft_printf("Hola %s %c%c %i %x | %X Pointer: %p", s, 'x', 'D', 42, -69, 69, NULL));
+// 	printf("\ncharcount: %i\n", printf("Hola %s %c%c %i %x | %X Pointer: %p", s, 'x', 'D', 42, -69, 69, NULL));
+// 	return (0);
+// }
