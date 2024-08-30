@@ -6,7 +6,7 @@
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/30 21:24:57 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/08/31 00:34:34 by cvizcain         ###   ########.fr       */
+/*   Updated: 2024/08/31 00:39:47 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	ft_putnbr_base(unsigned int nbr, char Xx, int *charcount)
 	unsigned int		base_len;
 
 	base_len = 16;
-
 	if (Xx == 'x')
 		base = "0123456789abcdef";
 	else
