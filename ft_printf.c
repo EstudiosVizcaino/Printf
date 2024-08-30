@@ -6,7 +6,7 @@
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 09:04:18 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/08/30 22:08:50 by cvizcain         ###   ########.fr       */
+/*   Updated: 2024/08/30 22:25:25 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,12 @@ void	ft_switch(const char *s, va_list	*lista, int *charcount)
 		ft_putnbr(va_arg(*lista, int), charcount);
 	if (*s == 'u')
 		ft_putdecun(va_arg(*lista, int), charcount);
+	if (*s == 'p')
+		ft_putnbr_base(va_arg(*lista, size_t), 'p', charcount);
 	if (*s == 'x')
 		ft_putnbr_base(va_arg(*lista, size_t), 'x', charcount);
 	if (*s == 'X')
-		ft_putnbr_base(va_arg(*lista, size_t),' X', charcount);
+		ft_putnbr_base(va_arg(*lista, size_t), 'X', charcount);
 	if (*s == '%')
 		ft_putchar('%', charcount);
 }
@@ -52,12 +54,12 @@ int	ft_printf(const char *s, ...)
 	}
 	return (charcount);
 }
-// int	main(void)
-// {
-// 	char	*s = ":)";
-// 	printf("\ncharcount: %i\n", ft_printf("Hola %s %c%c %i %x | %X", s, 'x', 'D', 42, -69, -69));
-// 	printf("\ncharcount: %i\n", printf("Hola %s %c%c %i %x | %X", s, 'x', 'D', 42, -69, -69));
-// 	return (0);
-// }
+int	main(void)
+{
+	char	*s = ":)";
+	printf("\ncharcount: %i\n", ft_printf("Hola %s %c%c %i %x | %X p: %p", s, 'x', 'D', 42, -69, -69, s));
+	printf("\ncharcount: %i\n", printf("Hola %s %c%c %i %x | %X p: %p", s, 'x', 'D', 42, -69, -69, s));
+	return (0);
+}
 
 
