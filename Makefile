@@ -5,16 +5,16 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g
 
 # Source files and object files
-SRCS = ft_printf.c\ # Add other source files here
+SRCS =	ft_printf.c\
 		ft_putstr.c\
 		ft_putchar.c\
-		ft_putdec.c\
 		ft_putdecun.c\
 		ft_puthex.c\
 		ft_puthexcaps.c\
-		ft_putptr\
+		ft_putptr.c\
 		ft_strlen.c\
 		ft_putnbr.c
+
 OBJS = $(SRCS:.c=.o)
 
 # Library name

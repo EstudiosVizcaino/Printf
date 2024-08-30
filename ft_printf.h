@@ -6,7 +6,7 @@
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 16:38:48 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/08/27 20:14:48 by cvizcain         ###   ########.fr       */
+/*   Updated: 2024/08/28 16:50:37 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 # define FT_PRINTF_H
 # include <unistd.h>
 # include <stdarg.h>
+# include <stdio.h>
 
 void	ft_putchar(int c, int *charcount);
-void	ft_putdec(int i);
-void	ft_putdecun(unsigned int i);
+void	ft_putdecun(int nb, int *charcount);
 void	ft_puthex(size_t nb, int *charcount);
 void	ft_puthexcaps(size_t nb, int *charcount);
 void	ft_putptr(size_t i);
