@@ -6,7 +6,7 @@
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 17:24:52 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/08/27 20:24:46 by cvizcain         ###   ########.fr       */
+/*   Updated: 2024/08/28 14:25:08 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	ft_write(char c, int *charcount)
 	*charcount += write (1, &c, 1);
 }
 
-void	ft_getnbr(int nb, int *charcount, char *base)
+static void	ft_getnbr(int nb, int *charcount, char *base)
 {
 	if (nb > 9)
 		ft_getnbr(nb / 16, charcount, base);
