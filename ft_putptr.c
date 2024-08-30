@@ -6,7 +6,7 @@
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 17:22:53 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/08/30 22:53:41 by cvizcain         ###   ########.fr       */
+/*   Updated: 2024/08/30 23:02:35 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ void	ft_putptr(void *nbr, int *charcount)
 {
 	unsigned long int	i;
 
+	if (nbr == NULL)
+	{
+		ft_putstr("(nil)", charcount);
+		return;
+	}
 	i = (unsigned long int) nbr;
 	ft_putstr("0x", charcount);
 	ft_putptr_base(i, charcount);
