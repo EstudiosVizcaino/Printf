@@ -9,8 +9,6 @@ SRCS =	ft_printf.c\
 		ft_putstr.c\
 		ft_putchar.c\
 		ft_putdecun.c\
-		ft_puthex.c\
-		ft_puthexcaps.c\
 		ft_putptr.c\
 		ft_strlen.c\
 		ft_putnbr.c\
