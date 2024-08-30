@@ -6,13 +6,10 @@
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 16:38:48 by cvizcain          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/08/30 21:40:22 by cvizcain         ###   ########.fr       */
-=======
-/*   Updated: 2024/08/28 16:50:37 by cvizcain         ###   ########.fr       */
->>>>>>> 5f25d4c29f6064c05ee0b2f238dee757107b7d9d
+/*   Updated: 2024/08/30 21:50:17 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H

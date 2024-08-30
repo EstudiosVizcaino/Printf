@@ -13,12 +13,8 @@ SRCS =	ft_printf.c\
 		ft_puthexcaps.c\
 		ft_putptr.c\
 		ft_strlen.c\
-<<<<<<< HEAD
 		ft_putnbr.c\
 		ft_putnbr_base.c
-=======
-		ft_putnbr.c
->>>>>>> 5f25d4c29f6064c05ee0b2f238dee757107b7d9d
 
 OBJS = $(SRCS:.c=.o)
 
