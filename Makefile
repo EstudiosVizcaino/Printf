@@ -25,7 +25,6 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -c $(SRCS)
 	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
 
 clean:
 	rm -f $(OBJS)
