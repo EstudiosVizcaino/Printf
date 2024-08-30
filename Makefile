@@ -14,7 +14,9 @@ SRCS = ft_printf.c\ # Add other source files here
 		ft_puthexcaps.c\
 		ft_putptr\
 		ft_strlen.c\
-		ft_putnbr.c
+		ft_putnbr.c\
+		ft_putnbr_base.c
+
 OBJS = $(SRCS:.c=.o)
 
 # Library name
