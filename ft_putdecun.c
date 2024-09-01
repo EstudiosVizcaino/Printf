@@ -6,7 +6,7 @@
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 17:24:16 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/09/01 20:46:56 by cvizcain         ###   ########.fr       */
+/*   Updated: 2024/09/01 22:26:54 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,23 @@ static void	ft_write(char c, int *charcount)
 	*charcount += write (1, &c, 1);
 }
 
-static void	ft_getnbr(unsigned int nb, int *charcount)
+static void	ft_getnbr(unsigned int nbr, int *charcount)
 {
-	if (nb > 9)
-		ft_getnbr(nb / 10, charcount);
-	ft_write(((nb % 10) + 48), charcount);
+	if (nbr > 9)
+		ft_getnbr(nbr / 10, charcount);
+	ft_write(((nbr % 10) + 48), charcount);
 }
 
-void	ft_putdecun(int nb, int *charcount)
+void	ft_putdecun(int nbr, int *charcount)
 {
 	unsigned int	u;
 
 	u = 0;
-	if (nb < 0)
+	if (nbr < 0)
 	{
-		u = (nb + 4294967296);
+		u = (nbr + 4294967296);
 		ft_getnbr(u, charcount);
 	}
 	else
-		ft_getnbr(nb, charcount);
+		ft_getnbr(nbr, charcount);
 }

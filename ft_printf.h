@@ -6,7 +6,7 @@
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 16:38:48 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/09/01 22:13:39 by cvizcain         ###   ########.fr       */
+/*   Updated: 2024/09/01 22:24:09 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int		ft_printf(const char *s, ...);
 void	ft_putchar(int c, int *charcount);
-void	ft_putdecun(int nb, int *charcount);
+void	ft_putdecun(int nbr, int *charcount);
 void	ft_putptr(void *nbr, int *charcount);
 void	ft_putstr(char *s, int *charcount);
 int		ft_strlen(char *s);

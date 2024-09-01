@@ -1,10 +1,9 @@
-# Makefile for ft_printf
 
-# Compiler and flags
+NAME = libftprintf.a
+
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g
 
-# Source files and object files
 SRCS =	ft_printf.c\
 		ft_putstr.c\
 		ft_putchar.c\
@@ -16,10 +15,7 @@ SRCS =	ft_printf.c\
 
 OBJS = $(SRCS:.c=.o)
 
-# Library name
-NAME = libftprintf.a
 
-# Compile rule
 all: $(NAME)
 
 $(NAME): $(OBJS)
