@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_hexa.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/30 21:24:57 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/08/31 00:39:47 by cvizcain         ###   ########.fr       */
+/*   Updated: 2024/09/01 21:16:37 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr_base(unsigned int nbr, char Xx, int *charcount)
+void	ft_putnbr_hexa(unsigned int nbr, char Xx, int *charcount)
 {
 	char				*base;
 	unsigned int		base_len;
@@ -26,7 +26,7 @@ void	ft_putnbr_base(unsigned int nbr, char Xx, int *charcount)
 		ft_putchar(base[nbr % base_len], charcount);
 	else
 	{
-		ft_putnbr_base(nbr / base_len, Xx, charcount);
-		ft_putnbr_base(nbr % base_len, Xx, charcount);
+		ft_putnbr_hexa(nbr / base_len, Xx, charcount);
+		ft_putnbr_hexa(nbr % base_len, Xx, charcount);
 	}
 }

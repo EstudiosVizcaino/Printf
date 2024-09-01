@@ -12,7 +12,7 @@ SRCS =	ft_printf.c\
 		ft_putptr.c\
 		ft_strlen.c\
 		ft_putnbr.c\
-		ft_putnbr_base.c
+		ft_putnbr_hexa.c
 
 OBJS = $(SRCS:.c=.o)
 
