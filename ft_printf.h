@@ -6,7 +6,7 @@
 /*   By: cvizcain <cvizcain@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 16:38:48 by cvizcain          #+#    #+#             */
-/*   Updated: 2024/09/01 21:34:55 by cvizcain         ###   ########.fr       */
+/*   Updated: 2024/09/01 22:13:39 by cvizcain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define FT_PRINTF_H
 # include <unistd.h>
 # include <stdarg.h>
-# include <stdio.h>
 
 int		ft_printf(const char *s, ...);
 void	ft_putchar(int c, int *charcount);
