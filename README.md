@@ -1,5 +1,10 @@
 # ft_printf
 
+![Grade](https://img.shields.io/badge/grade-125%2F100-brightgreen?style=flat-square)
+![Norminette](https://img.shields.io/badge/norminette-0%20errors-brightgreen?style=flat-square)
+![Language](https://img.shields.io/badge/language-C-00599C?style=flat-square&logo=c&logoColor=white)
+![42](https://img.shields.io/badge/42-Madrid-000000?style=flat-square)
+
 A reimplementation of the C standard library's `printf`, written for the 42 curriculum.
 
 The project compiles to a static library, `libftprintf.a`, which exposes one public
